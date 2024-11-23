@@ -1,0 +1,8 @@
+name: EconomyPlugin
+version: 1.0.0
+main: lol.aliaga.economy.Economy
+author: Martin
+description: A simple economy plugin with PostgreSQL support.
+commands:
+  pay:
+  balance:
