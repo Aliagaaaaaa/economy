@@ -24,32 +24,6 @@
 
 ---
 
-## Installation
-
-1. **Setup PostgreSQL**:
-    - Ensure your PostgreSQL server is running and accessible.
-
-2. **Install the Plugin**:
-    - Place `EconomyPlugin.jar` in your server’s `plugins` folder.
-
-3. **Edit Configuration**:
-    - After starting the server once, a `config.yml` file will be created in the plugin's folder.
-    - Open `config.yml` and edit the following section to match your database setup:
-      ```yaml
-      database:
-        host: localhost
-        port: 5432
-        name: economy
-        user: postgres
-        password: 123
-        maxPoolSize: 10
-      ```
-
-4. **Restart the Server**:
-    - After saving changes to `config.yml`, restart the server for the changes to take effect.
-
----
-
 ## Commands
 
 - `/balance [player]`: View your or another player's balance.
