@@ -4,6 +4,7 @@ import lol.aliaga.economy.commands.BalanceCommand;
 import lol.aliaga.economy.commands.PayCommand;
 import lol.aliaga.economy.database.DatabaseManager;
 import lol.aliaga.economy.listeners.PlayerJoinListener;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Economy extends JavaPlugin {
@@ -20,12 +21,23 @@ public class Economy extends JavaPlugin {
         getLogger().info("Economy plugin enabled");
         instance = this;
 
-        databaseManager = new DatabaseManager("localhost",
-                5432,
-                "economy",
-                "postgres",
-                "123",
-                10);
+        saveDefaultConfig();
+
+        FileConfiguration config = getConfig();
+        String host = config.getString("database.host", "localhost");
+        int port = config.getInt("database.port", 5432);
+        String dbName = config.getString("database.name", "economy");
+        String user = config.getString("database.user", "postgres");
+        String password = config.getString("database.password", "123");
+        int maxPoolSize = config.getInt("database.maxPoolSize", 10);
+
+
+        databaseManager = new DatabaseManager(host,
+                port,
+                dbName,
+                user,
+                password,
+                maxPoolSize);
 
         databaseManager.initializeTables();
 
