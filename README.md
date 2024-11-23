@@ -1,4 +1,3 @@
-
 # EconomyPlugin
 
 ## Description
@@ -70,6 +69,36 @@
     password: (Database password)
     maxPoolSize: (Maximum database connection pool size, default 10)
   ```
+
+---
+
+## Compiling the Plugin
+
+To compile the plugin from the source code, follow these steps:
+
+1. **Install Prerequisites**:
+    - Ensure you have Java 17 or higher installed.
+    - Install Maven, a build automation tool for Java.
+
+2. **Clone the Repository**:
+    - Clone the source code to your local machine using Git:
+      ```bash
+      git clone https://github.com/your-repo/EconomyPlugin.git
+      cd EconomyPlugin
+      ```
+
+3. **Build the Plugin**:
+    - Use Maven to compile the code and package it into a `.jar` file:
+      ```bash
+      mvn clean package
+      ```
+    - The compiled `.jar` file will be located in the `target/` directory.
+
+4. **Install the Compiled Plugin**:
+    - Copy the `EconomyPlugin-1.0-SNAPSHOT.jar` file from the `target/` folder to your server’s `plugins` directory.
+
+5. **Run Your Server**:
+    - Start your Minecraft server. The plugin should load automatically.
 
 ---
 
